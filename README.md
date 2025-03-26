@@ -10,14 +10,15 @@
 ---
 
 # Required ReadMe Info for ALL MCS1653 Projects
-* **Project**   - 
-* **Your Name** - 
-* **Date**      - 
+* **Project**   - Echo Breach
+* **Your Name** - Eric Harrison
+* **Date**      - 16/04/2025
 
 <br>
 
 1. **What are the controls to your game? How do we play?**
-
+WASD to teleport Up, Left, Down, Right
+The goal is to reach the end of the stage while avoiding/using the environment
 
 
 <br>
@@ -47,13 +48,13 @@
 <br>
 
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
-
+https://www.youtube.com/watch?v=YAHFnF2MRsE
 
 
 <br>
 
 7. **What trouble did you have with this project?**
-
+Figuring out how to check what tile the player will teleport onto
 
 
 <br>
