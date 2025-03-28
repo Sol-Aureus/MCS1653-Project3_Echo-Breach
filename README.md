@@ -49,6 +49,7 @@ The goal is to reach the end of the stage while avoiding/using the environment
 
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
 https://www.youtube.com/watch?v=YAHFnF2MRsE
+https://www.youtube.com/watch?v=CGsEJToeXmA
 
 
 <br>
