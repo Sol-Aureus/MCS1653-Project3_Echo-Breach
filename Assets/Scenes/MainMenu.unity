@@ -650,7 +650,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &208875862
 MonoBehaviour:
@@ -875,7 +875,7 @@ MonoBehaviour:
   fitType: 4
   rows: 3
   columns: 1
-  cellSize: {x: 819.7479, y: 118.380615}
+  cellSize: {x: 840.0873, y: 124.98368}
   spacing: {x: 2.9, y: 50}
   fitX: 1
   fitY: 1
@@ -984,7 +984,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480876227
 MonoBehaviour:
@@ -4146,7 +4146,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1813350237
 MonoBehaviour:
@@ -4783,24 +4783,6 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
---- !u!1 &2097586433 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5533398548436540200, guid: 18ba81c5cf173ea49bb75d4e1144028d, type: 3}
-  m_PrefabInstance: {fileID: 7960750561498380163}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2097586435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097586433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea6ce736093c67446acd3f31e7f9ca10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: ede73dd03d39b734c854f73007c01448, type: 2}
 --- !u!1001 &5738660955816395350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4978,10 +4960,7 @@ PrefabInstance:
     - {fileID: -965927274232832077, guid: 18ba81c5cf173ea49bb75d4e1144028d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5533398548436540200, guid: 18ba81c5cf173ea49bb75d4e1144028d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2097586435}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ba81c5cf173ea49bb75d4e1144028d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

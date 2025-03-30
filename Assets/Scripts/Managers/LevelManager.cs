@@ -8,20 +8,16 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
 
-    [Header("Menus")]
-    [SerializeField] private GameObject pauseMenu;
-
     [Header("References")]
+    [SerializeField] private GameObject pauseMenu;
     [SerializeField] private AudioClip[] menuSounds;
+    [SerializeField] private GameObject robot;
 
     private bool isPaused = false;
     private bool otherMenu = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    private List<Vector3> robotMoves = new List<Vector3>();
+    private List<Quaternion> robotRotation = new List<Quaternion>();
 
     // Update is called once per frame
     void Update()
@@ -70,5 +66,28 @@ public class LevelManager : MonoBehaviour
 
         // Unpauses the game
         Time.timeScale = 1;
+    }
+
+    // Adds the move to the list of moves
+    public void AddMove()
+    {
+        robotMoves.Add(robot.transform.position);
+        robotRotation.Add(robot.transform.rotation);
+    }
+
+    // Undoes the last move
+    public void UndoMove()
+    {
+        // Checks if there are any moves to undo
+        if (robotMoves.Count > 0)
+        {
+            // Moves the robot to the last position
+            robot.transform.position = robotMoves[robotMoves.Count - 1];
+            robot.transform.rotation = robotRotation[robotRotation.Count - 1];
+
+            // Removes the last move from the list
+            robotMoves.RemoveAt(robotMoves.Count - 1);
+            robotRotation.RemoveAt(robotRotation.Count - 1);
+        }
     }
 }
