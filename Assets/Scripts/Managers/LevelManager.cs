@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager instance;
-
     [Header("References")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private AudioClip[] menuSounds;
