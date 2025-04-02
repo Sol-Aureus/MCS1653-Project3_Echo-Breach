@@ -128,7 +128,7 @@ public class Robot : MonoBehaviour
     {
         // Play sound effect
         //menuSoundsManager.instance.PlaySound(menuSounds[1], transform, 0.5f);
-        // Restart the level
+        // Stop the robot fromm moving
         canMove = false;
     }
 }

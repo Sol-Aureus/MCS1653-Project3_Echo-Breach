@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class LevelManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject winMenu;
     [SerializeField] private AudioClip[] menuSounds;
     [SerializeField] private GameObject robot;
+    [SerializeField] private TextMeshProUGUI moveText;
 
     private bool isPaused = false;
     private bool otherMenu = false;
@@ -48,6 +52,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    // Opens the win menu
+    public void Win()
+    {
+        otherMenu = true;
+        winMenu.SetActive(true);
+        Time.timeScale = 0;
+    }
+
     // Returns to the main menu
     public void Home()
     {
@@ -61,6 +73,15 @@ public class LevelManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        // Unpauses the game
+        Time.timeScale = 1;
+    }
+
+    // Loads the next level
+    public void Next()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
         // Unpauses the game
         Time.timeScale = 1;
@@ -87,5 +108,12 @@ public class LevelManager : MonoBehaviour
             robotMoves.RemoveAt(robotMoves.Count - 1);
             robotRotation.RemoveAt(robotRotation.Count - 1);
         }
+    }
+
+    // Changes the gui when needed
+    private void OnGUI()
+    {
+        // Tells the player how many moves they made
+        moveText.text = "Moves: " + robotMoves.Count;
     }
 }
