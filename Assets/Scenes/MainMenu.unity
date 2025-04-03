@@ -875,7 +875,7 @@ MonoBehaviour:
   fitType: 4
   rows: 3
   columns: 1
-  cellSize: {x: 840.0873, y: 124.98368}
+  cellSize: {x: 840.5105, y: 124.9043}
   spacing: {x: 2.9, y: 50}
   fitX: 1
   fitY: 1
@@ -1038,7 +1038,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 208875860}
   levelSelect: {fileID: 1813350235}
-  soundFX: []
+  soundFX:
+  - {fileID: 8300000, guid: d78417d69291170419a35213d6e2ac76, type: 3}
 --- !u!1 &483810509
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,7 +4958,7 @@ PrefabInstance:
       value: SoundFXManager
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: -965927274232832077, guid: 18ba81c5cf173ea49bb75d4e1144028d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

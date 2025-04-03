@@ -59,5 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
+  winMenu: {fileID: 0}
   menuSounds: []
   robot: {fileID: 0}
+  moveText: {fileID: 0}
