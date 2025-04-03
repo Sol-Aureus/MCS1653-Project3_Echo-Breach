@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject robot;
     [SerializeField] private TextMeshProUGUI moveText;
 
-    private bool isPaused = false;
+    public bool isPaused = false;
     private bool otherMenu = false;
 
     private List<Vector3> robotMoves = new List<Vector3>();
@@ -56,6 +56,7 @@ public class LevelManager : MonoBehaviour
     public void Win()
     {
         otherMenu = true;
+        isPaused = true;
         winMenu.SetActive(true);
         Time.timeScale = 0;
     }
