@@ -14,12 +14,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private AudioClip[] menuSounds;
     [SerializeField] private GameObject robot;
     [SerializeField] private TextMeshProUGUI moveText;
+    [SerializeField] private GameObject[] paper;
 
     public bool isPaused = false;
     private bool otherMenu = false;
 
     private List<Vector3> robotMoves = new List<Vector3>();
     private List<Quaternion> robotRotation = new List<Quaternion>();
+    private List<bool> paperActive = new List<bool>();
 
     // Update is called once per frame
     void Update()
@@ -93,6 +95,11 @@ public class LevelManager : MonoBehaviour
     {
         robotMoves.Add(robot.transform.position);
         robotRotation.Add(robot.transform.rotation);
+
+        for (int i = 0; i < paper.Length; i++)
+        {
+            paperActive.Add(paper[i].activeSelf);
+        }
     }
 
     // Undoes the last move
@@ -104,6 +111,12 @@ public class LevelManager : MonoBehaviour
             // Moves the robot to the last position
             robot.transform.position = robotMoves[robotMoves.Count - 1];
             robot.transform.rotation = robotRotation[robotRotation.Count - 1];
+
+            for (int i = paper.Length - 1; i >= 0; i--)
+            {
+                paper[i].SetActive(paperActive[paperActive.Count - 1]);
+                paperActive.RemoveAt(paperActive.Count - 1);
+            }
 
             // Removes the last move from the list
             robotMoves.RemoveAt(robotMoves.Count - 1);
