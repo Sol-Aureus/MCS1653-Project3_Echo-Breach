@@ -15,6 +15,7 @@ public class Robot : MonoBehaviour
     [SerializeField] private float offset;
 
     private bool canMove = true;
+    private float moveCooldown = 0.05f;
 
     // Update is called once per frame
     void Update()
@@ -22,8 +23,9 @@ public class Robot : MonoBehaviour
         // Checks if the game is paused
         if (!levelManager.isPaused)
         {
+            moveCooldown -= Time.deltaTime;
             // Checks if the player is allowed to move
-            if (canMove)
+            if (canMove && moveCooldown < 0)
             {
                 // Allows the player to move the robot
                 if (Input.GetKeyDown("w") || Input.GetKeyDown("up"))
@@ -47,6 +49,7 @@ public class Robot : MonoBehaviour
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y + (offset * 2), transform.position.z);
+                    moveCooldown = 0.05f;
                 }
                 else if (Input.GetKeyDown("s") || Input.GetKeyDown("down"))
                 {
@@ -69,6 +72,7 @@ public class Robot : MonoBehaviour
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y - (offset * 2), transform.position.z);
+                    moveCooldown = 0.05f;
                 }
                 else if (Input.GetKeyDown("a") || Input.GetKeyDown("left"))
                 {
@@ -91,6 +95,7 @@ public class Robot : MonoBehaviour
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x - (offset * 2), transform.position.y, transform.position.z);
+                    moveCooldown = 0.05f;
                 }
                 else if (Input.GetKeyDown("d") || Input.GetKeyDown("right"))
                 {
@@ -113,6 +118,7 @@ public class Robot : MonoBehaviour
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x + (offset * 2), transform.position.y, transform.position.z);
+                    moveCooldown = 0.05f;
                 }
             }
 
