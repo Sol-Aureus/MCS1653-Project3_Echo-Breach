@@ -8,18 +8,13 @@ public class Robot : MonoBehaviour
     [Header("References")]
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LevelManager levelManager;
+    [SerializeField] private GameObject[] sounds;
+    [SerializeField] private GameObject echoPrefab;
 
     [Header("Attributes")]
     [SerializeField] private float offset;
 
     private bool canMove = true;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -48,6 +43,7 @@ public class Robot : MonoBehaviour
 
                     // Rotate the robot to face up
                     transform.rotation = Quaternion.Euler(0, 0, 0);
+                    SpawnEcho();
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y + (offset * 2), transform.position.z);
@@ -69,6 +65,7 @@ public class Robot : MonoBehaviour
 
                     // Rotate the robot to face down
                     transform.rotation = Quaternion.Euler(0, 0, 180);
+                    SpawnEcho();
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y - (offset * 2), transform.position.z);
@@ -90,6 +87,7 @@ public class Robot : MonoBehaviour
 
                     // Rotate the robot to face left
                     transform.rotation = Quaternion.Euler(0, 0, 90);
+                    SpawnEcho();
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x - (offset * 2), transform.position.y, transform.position.z);
@@ -111,6 +109,7 @@ public class Robot : MonoBehaviour
 
                     // Rotate the robot to face right
                     transform.rotation = Quaternion.Euler(0, 0, 270);
+                    SpawnEcho();
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x + (offset * 2), transform.position.y, transform.position.z);
@@ -134,5 +133,14 @@ public class Robot : MonoBehaviour
 
         // Stop the robot fromm moving
         canMove = false;
+    }
+
+    // Spawns the echo prefab
+    public void SpawnEcho()
+    {
+        // Play sound effect
+        //menuSoundsManager.instance.PlaySound(menuSounds[0], transform, 0.5f);
+        // Spawn the echo prefab
+        Instantiate(echoPrefab, transform.position, transform.rotation);
     }
 }
