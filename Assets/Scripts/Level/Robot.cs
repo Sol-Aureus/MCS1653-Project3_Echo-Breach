@@ -16,6 +16,13 @@ public class Robot : MonoBehaviour
 
     private bool canMove = true;
     private float moveCooldown = 0.05f;
+    private Animator animator;
+
+    // Awake is called when the script instance is being loaded
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -126,6 +133,10 @@ public class Robot : MonoBehaviour
             if (Input.GetKeyDown("r"))
             {
                 levelManager.UndoMove();
+
+                // Stop the death animation
+                animator.SetBool("isDead", false);
+
                 canMove = true;
             }
         }
@@ -136,6 +147,9 @@ public class Robot : MonoBehaviour
     {
         // Play sound effect
         //menuSoundsManager.instance.PlaySound(menuSounds[1], transform, 0.5f);
+
+        // Play the death animation
+        animator.SetBool("isDead", true);
 
         // Stop the robot fromm moving
         canMove = false;
