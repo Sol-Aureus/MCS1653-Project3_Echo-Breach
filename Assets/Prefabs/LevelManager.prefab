@@ -60,6 +60,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
   winMenu: {fileID: 0}
-  menuSounds: []
+  menuSounds:
+  - {fileID: 8300000, guid: cc4b7aa3d6510944a877f8b0095d2cdb, type: 3}
+  - {fileID: 8300000, guid: 6faa6ce79c2ff2f479d117c878d265b4, type: 3}
+  - {fileID: 8300000, guid: 9cd32d719edc55441a4f09c2d529d5eb, type: 3}
   robot: {fileID: 0}
   moveText: {fileID: 0}
+  paper: []
+  isPaused: 0

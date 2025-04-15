@@ -24,25 +24,31 @@ The goal is to reach the end of the stage while avoiding/using the environment
 <br>
 
 2. **What creative additions did you make? How can we find them?**
-
+The player leaves an echo when ever they move
 
 
 <br>
 
 3. **Any assets used that you didn't create yourself?** <br> (art, music, etc. Just tell us where you got it, link it here)
-
+https://freesound.org/people/TeamEnFil/sounds/728712/
+https://freesound.org/people/pfranzen/sounds/343773/
+https://freesound.org/people/GameAudio/sounds/220205/
+https://freesound.org/people/YoYoMummy/sounds/369062/
+https://freesound.org/people/LittleRobotSoundFactory/sounds/270528/
+https://freesound.org/people/jeckkech/sounds/391664/
+https://freesound.org/people/primeval_polypod/sounds/159389/
 
 
 <br>
 
 4. **Did you receive help from anyone outside this class?** <br> (list their names and what they helped with)
-
+N/A
 
 
 <br>
 
 5. **Did you get help from any AI Code Assistants?** <br> (Tell us which .cs file to look in for the citation and describe what you learned)
-
+N/A
 
 
 <br>
@@ -50,6 +56,7 @@ The goal is to reach the end of the stage while avoiding/using the environment
 6. **Did you get help from any online websites, videos, or tutorials?** <br> (link them here)
 https://www.youtube.com/watch?v=YAHFnF2MRsE
 https://www.youtube.com/watch?v=CGsEJToeXmA
+https://www.youtube.com/watch?v=xswEpNpucZQ
 
 
 <br>
@@ -61,7 +68,7 @@ Figuring out how to check what tile the player will teleport onto
 <br>
 
 8. **Is there anything else we should know?**
-
+N/A
 
 
 

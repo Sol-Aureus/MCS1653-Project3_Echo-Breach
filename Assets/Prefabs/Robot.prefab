@@ -166,7 +166,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   levelManager: {fileID: 0}
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: ac849adccd76cb942875c674637907d2, type: 3}
+  - {fileID: 8300000, guid: 860e0c9f968061444860801a101346ee, type: 3}
+  - {fileID: 8300000, guid: b44c59bddecc9b54d9214afe61643073, type: 3}
   echoPrefab: {fileID: 8231273580252167783, guid: eec048aaa3428db42a5bd497291338f5, type: 3}
   offset: 1
 --- !u!95 &-2716570220476499196

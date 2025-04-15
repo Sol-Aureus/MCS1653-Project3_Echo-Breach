@@ -8,7 +8,7 @@ public class Robot : MonoBehaviour
     [Header("References")]
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LevelManager levelManager;
-    [SerializeField] private GameObject[] sounds;
+    [SerializeField] private AudioClip[] sounds;
     [SerializeField] private GameObject echoPrefab;
 
     [Header("Attributes")]
@@ -22,6 +22,9 @@ public class Robot : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        
+        // Play sound effect
+        SoundFXManager.instance.PlaySound(sounds[1], transform, 1);
     }
 
     // Update is called once per frame
@@ -54,6 +57,9 @@ public class Robot : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     SpawnEcho();
 
+                    // Play sound effect
+                    SoundFXManager.instance.PlaySound(sounds[2], transform, 1);
+
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y + (offset * 2), transform.position.z);
                     moveCooldown = 0.05f;
@@ -76,6 +82,9 @@ public class Robot : MonoBehaviour
                     // Rotate the robot to face down
                     transform.rotation = Quaternion.Euler(0, 0, 180);
                     SpawnEcho();
+
+                    // Play sound effect
+                    SoundFXManager.instance.PlaySound(sounds[2], transform, 1);
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x, transform.position.y - (offset * 2), transform.position.z);
@@ -100,6 +109,9 @@ public class Robot : MonoBehaviour
                     transform.rotation = Quaternion.Euler(0, 0, 90);
                     SpawnEcho();
 
+                    // Play sound effect
+                    SoundFXManager.instance.PlaySound(sounds[2], transform, 1);
+
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x - (offset * 2), transform.position.y, transform.position.z);
                     moveCooldown = 0.05f;
@@ -122,6 +134,9 @@ public class Robot : MonoBehaviour
                     // Rotate the robot to face right
                     transform.rotation = Quaternion.Euler(0, 0, 270);
                     SpawnEcho();
+
+                    // Play sound effect
+                    SoundFXManager.instance.PlaySound(sounds[2], transform, 1);
 
                     // Move the robot if there is no wall
                     transform.position = new Vector3(transform.position.x + (offset * 2), transform.position.y, transform.position.z);
@@ -146,7 +161,7 @@ public class Robot : MonoBehaviour
     public void KillRobot()
     {
         // Play sound effect
-        //menuSoundsManager.instance.PlaySound(menuSounds[1], transform, 0.5f);
+        SoundFXManager.instance.PlaySound(sounds[0], transform, 0.6f);
 
         // Play the death animation
         animator.SetBool("isDead", true);

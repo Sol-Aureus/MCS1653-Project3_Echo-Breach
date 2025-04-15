@@ -19,21 +19,21 @@ public class MainMenuButtons : MonoBehaviour
     // PlayGame opens the level select menu
     public void PlayGame()
     {
-        //SoundFX.instance.PlaySound(soundFX[0], transform, 0.5f);
+        SoundFXManager.instance.PlaySound(soundFX[0], transform, 1);
         levelSelect.SetActive(true);
     }
 
     // Options opens the options menu
     public void Options()
     {
-        //SoundFX.instance.PlaySound(soundFX[0], transform, 0.5f);
+        SoundFXManager.instance.PlaySound(soundFX[0], transform, 1);
         optionsMenu.SetActive(true);
     }
 
     // Back closes the options and level select menus
     public void Back()
     {
-        //SoundFX.instance.PlaySound(soundFX[0], transform, 0.5f);
+        SoundFXManager.instance.PlaySound(soundFX[0], transform, 1);
         optionsMenu.SetActive(false);
         levelSelect.SetActive(false);
     }

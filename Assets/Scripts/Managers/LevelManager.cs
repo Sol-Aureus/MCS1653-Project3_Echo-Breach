@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     public void Pause()
     {
         // Play sound effect
-        //menuSoundsManager.instance.PlaySound(menuSounds[2], transform, 0.5f);
+        SoundFXManager.instance.PlaySound(menuSounds[0], transform, 0.8f);
 
         // Checks if the pause menu is already open
         isPaused = !isPaused;
@@ -61,6 +61,9 @@ public class LevelManager : MonoBehaviour
         isPaused = true;
         winMenu.SetActive(true);
         Time.timeScale = 0;
+
+        // Play sound effect
+        SoundFXManager.instance.PlaySound(menuSounds[1], transform, 1);
     }
 
     // Returns to the main menu
@@ -108,6 +111,9 @@ public class LevelManager : MonoBehaviour
         // Checks if there are any moves to undo
         if (robotMoves.Count > 0)
         {
+            // Play sound effect
+            SoundFXManager.instance.PlaySound(menuSounds[2], transform, 0.6f);
+
             // Moves the robot to the last position
             robot.transform.position = robotMoves[robotMoves.Count - 1];
             robot.transform.rotation = robotRotation[robotRotation.Count - 1];

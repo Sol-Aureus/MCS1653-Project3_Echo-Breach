@@ -7,6 +7,7 @@ public class Conveyor : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform movePos;
     [SerializeField] private GameObject echo;
+    [SerializeField] private AudioClip sound;
 
     // Detects when the player collides
     private void OnTriggerEnter2D(Collider2D other)
@@ -17,6 +18,9 @@ public class Conveyor : MonoBehaviour
 
             // Moves the player to the move position
             other.transform.position = movePos.position;
+
+            // Play sound effect
+            SoundFXManager.instance.PlaySound(sound, transform, 0.8f);
         }
     }
 }

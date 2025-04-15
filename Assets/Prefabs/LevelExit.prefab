@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   paper: []
+  sound: {fileID: 8300000, guid: 6faa6ce79c2ff2f479d117c878d265b4, type: 3}
 --- !u!95 &440198998623421058
 Animator:
   serializedVersion: 5

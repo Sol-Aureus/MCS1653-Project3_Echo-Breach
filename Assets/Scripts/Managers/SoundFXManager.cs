@@ -13,8 +13,10 @@ public class SoundFXManager : MonoBehaviour
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
+        // Checks if the instance is already set
         if (instance == null)
         {
+            // Sets the instance to this
             instance = this;
         }
     }

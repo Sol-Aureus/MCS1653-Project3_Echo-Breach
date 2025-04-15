@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movePos: {fileID: 2170155107587537441}
   echo: {fileID: 8231273580252167783, guid: eec048aaa3428db42a5bd497291338f5, type: 3}
+  sound: {fileID: 8300000, guid: 0dd45814062810a4691701521733e41d, type: 3}
 --- !u!95 &8665634044532659930
 Animator:
   serializedVersion: 5
